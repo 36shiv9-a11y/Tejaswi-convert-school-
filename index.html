@@ -13,75 +13,103 @@
         input, select, textarea { border: 2px solid #e2e8f0 !important; border-radius: 12px !important; padding: 14px !important; width: 100%; outline: none; background: white !important; color: black !important; }
         @keyframes marquee { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
         .animate-marquee { display: inline-block; animation: marquee 20s linear infinite; }
+        .card-shadow { box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
     </style>
 </head>
 <body class="bg-slate-50 font-sans text-slate-900">
 
     <div class="marquee-bg py-2 overflow-hidden sticky top-0 z-[60]">
         <div class="whitespace-nowrap animate-marquee flex items-center">
-            <span class="bg-red-600 text-white px-3 py-1 rounded-full text-[10px] font-black mx-4">LATEST NEWS</span>
-            <span id="live-notice" class="text-red-700 font-bold italic text-lg">Loading latest news from school...</span>
+            <span class="bg-red-600 text-white px-3 py-1 rounded-full text-[10px] font-black mx-4 italic">LATEST NEWS</span>
+            <span id="live-notice" class="text-red-700 font-bold italic text-lg tracking-tight">Loading latest news from school...</span>
         </div>
     </div>
 
-    <nav class="bg-white shadow-md p-4 sticky top-[44px] z-50 border-b-4 border-blue-900">
+    <nav class="bg-white shadow-md p-4 sticky top-[46px] z-50 border-b-4 border-blue-900">
         <div class="max-w-6xl mx-auto flex justify-between items-center">
             <div>
                 <h1 class="text-xl md:text-2xl font-black text-blue-900 italic uppercase leading-none">TEJASVINI CONVENT</h1>
                 <p class="text-[8px] font-bold text-gray-500 tracking-[0.2em] uppercase mt-1">Kolar Road, Bhopal | MP Board</p>
             </div>
-            <div class="bg-red-600 text-white text-[9px] px-3 py-1.5 rounded-full font-black animate-pulse">ADMISSION OPEN</div>
+            <div class="bg-red-600 text-white text-[9px] px-3 py-1.5 rounded-full font-black animate-pulse uppercase">Admission Open</div>
         </div>
     </nav>
 
     <main class="max-w-6xl mx-auto py-12 px-4">
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-16">
+            <div class="bg-white p-5 rounded-3xl card-shadow border-t-8 border-blue-900">
+                <img src="https://images.pexels.com/photos/5212339/pexels-photo-5212339.jpeg?auto=compress&cs=tinysrgb&w=600" class="w-full h-72 object-cover rounded-2xl mb-5 shadow-inner" alt="Principal">
+                <h3 class="text-2xl font-black text-blue-900 italic">Principal Desk</h3>
+                <p class="text-gray-600 text-sm mt-3 italic leading-relaxed">"Humara uddeshya har bacche ko atmavishwas aur sahi disha dena hai. Tejasvini School mein hum shiksha ke saath-saath sanskaron par bhi vishesh dhyan dete hain."</p>
+            </div>
+
+            <div class="school-blue text-white p-10 rounded-3xl card-shadow flex flex-col justify-center">
+                <h3 class="text-2xl font-black mb-8 border-b-4 border-yellow-400 pb-2 uppercase italic">School Highlights</h3>
+                <ul class="space-y-4 text-sm font-bold italic">
+                    <li class="flex items-center gap-4"><i class="fas fa-star text-yellow-400"></i> MP Board (MPBSE) Pattern</li>
+                    <li class="flex items-center gap-4"><i class="fas fa-star text-yellow-400"></i> Modern Computer & Science Lab</li>
+                    <li class="flex items-center gap-4"><i class="fas fa-star text-yellow-400"></i> Experienced Teaching Staff</li>
+                    <li class="flex items-center gap-4"><i class="fas fa-star text-yellow-400"></i> Sports & Cultural Activities</li>
+                </ul>
+            </div>
+        </div>
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            <div class="bg-white p-8 rounded-3xl shadow-xl border-t-8 border-blue-900">
-                <h3 class="text-2xl font-black text-blue-900 mb-6 uppercase italic">Fees Structure</h3>
+            <div class="bg-white p-8 rounded-3xl card-shadow border-t-8 border-blue-900">
+                <h3 class="text-2xl font-black text-blue-900 mb-6 uppercase italic">Fee Structure (2026-27)</h3>
                 <div class="space-y-3 font-bold text-gray-700">
-                    <p class="flex justify-between border-b pb-2"><span>Nursery - KG:</span> <span class="text-green-700">₹8,000 - ₹12,000</span></p>
+                    <p class="flex justify-between border-b pb-2"><span>Nursery - KG-2:</span> <span class="text-green-700">₹8,000 - ₹12,000</span></p>
                     <p class="flex justify-between border-b pb-2"><span>Class 1st - 5th:</span> <span class="text-green-700">₹15,000 - ₹18,000</span></p>
                     <p class="flex justify-between border-b pb-2"><span>Class 6th - 10th:</span> <span class="text-green-700">₹20,000 - ₹30,000</span></p>
                 </div>
             </div>
 
-            <div class="bg-white p-8 rounded-3xl shadow-xl border-t-8 border-green-600 text-center">
+            <div class="bg-white p-8 rounded-3xl card-shadow border-t-8 border-green-600 text-center">
                 <h3 class="text-xl font-black text-green-700 mb-4 uppercase italic">Online Payment</h3>
                 <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=upi://pay?pa=9977851389@upi&pn=TejasviniSchool" class="w-32 h-32 mx-auto mb-4 border-2 p-1 rounded-lg" alt="QR">
                 <p class="text-sm font-bold text-gray-800 bg-green-50 py-2 rounded-lg">UPI: 9977851389@upi</p>
             </div>
         </div>
 
-        <div class="bg-white rounded-[40px] shadow-2xl overflow-hidden border-2 border-blue-50">
+        <div class="bg-white rounded-[40px] shadow-2xl overflow-hidden border-2 border-blue-50 mb-10">
             <div class="p-10">
-                <h3 class="text-3xl font-black text-blue-900 mb-6 uppercase italic tracking-tighter text-center">Admission Inquiry</h3>
-                <div class="space-y-4 max-w-lg mx-auto">
+                <h3 class="text-3xl font-black text-blue-900 mb-2 uppercase italic tracking-tighter text-center">Online Admission</h3>
+                <p class="text-center text-xs text-gray-400 font-bold mb-8 tracking-widest uppercase">Naye session ke liye inquiry bhejein</p>
+                
+                <div class="space-y-4 max-w-2xl mx-auto">
                     <input type="text" id="stuName" placeholder="Bacche ka Pura Naam">
                     <div class="grid grid-cols-2 gap-4">
                         <input type="number" id="stuAge" placeholder="Umra (Age)">
                         <select id="stuClass">
-                            <option value="">Class Chunein</option>
-                            <option value="Primary">Primary (1st-5th)</option>
-                            <option value="Middle">Middle (6th-8th)</option>
-                            <option value="High">High (9th-10th)</option>
+                            <option value="">Class Chunein...</option>
+                            <option value="Nursery">Nursery</option>
+                            <option value="KG-1">KG-1</option>
+                            <option value="KG-2">KG-2</option>
+                            <option value="1st to 5th">1st to 5th</option>
+                            <option value="6th to 8th">6th to 8th</option>
+                            <option value="9th to 10th">9th to 10th</option>
                         </select>
                     </div>
-                    <input type="text" id="parPhone" placeholder="Parent ka Mobile Number">
+                    <input type="text" id="parPhone" placeholder="Mobile Number">
+                    <textarea id="parAddr" placeholder="Pata (Address)" class="h-24"></textarea>
+                    
                     <button onclick="submitToWA()" class="w-full bg-green-600 text-white font-black py-5 rounded-2xl shadow-xl hover:bg-green-700 flex items-center justify-center gap-3 text-lg uppercase transition-transform active:scale-95">
-                        <i class="fab fa-whatsapp text-2xl"></i> Principal ko Bhejein
+                        <i class="fab fa-whatsapp text-2xl"></i> Form Jama Karein
                     </button>
                 </div>
             </div>
         </div>
     </main>
 
-    <footer class="bg-slate-900 text-white py-10 text-center">
-        <p class="text-xs opacity-50 font-bold uppercase tracking-widest italic">Tejasvini Convent School | Bhopal</p>
+    <footer class="bg-slate-900 text-white py-12 text-center border-t-8 border-yellow-400">
+        <h3 class="text-yellow-400 font-black italic uppercase tracking-widest mb-2">Tejasvini Convent School</h3>
+        <p class="text-[10px] opacity-60 font-bold uppercase tracking-[0.2em] mb-4">Kolar Road, Bhopal (M.P.)</p>
+        <p class="text-[9px] opacity-40 uppercase">Designed by Shiv AI | 2026</p>
     </footer>
 
     <script>
-        // GOOGLE SHEET SE DATA KHINCHNE KA SYSTEM
+        // GOOGLE SHEET ID (Connected to your sheet)
         const sheetId = '1cGF-uOkZbUl87ZtQ0jWMdAaGEjrqfJEISArP9xyZcz8';
         const csvUrl = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:csv&sheet=Sheet1`;
 
@@ -91,26 +119,34 @@
                 const data = await response.text();
                 const rows = data.split('\n');
                 if (rows.length > 1) {
-                    // Row 2 (index 1) se data nikalna aur extra quotes ("") hatana
                     let noticeText = rows[1].split(',')[0].replace(/"/g, "");
                     document.getElementById('live-notice').innerText = noticeText;
                 }
             } catch (e) {
-                document.getElementById('live-notice').innerText = "Welcome to Tejasvini Convent School!";
+                document.getElementById('live-notice').innerText = "Tejasvini Convent School mein aapka swagat hai!";
             }
         }
 
         function submitToWA() {
             const n = document.getElementById('stuName').value;
+            const a = document.getElementById('stuAge').value;
+            const c = document.getElementById('stuClass').value;
             const p = document.getElementById('parPhone').value;
-            if(!n || !p) { alert("Naam aur Number bharein!"); return; }
-            const msg = `*Admission Inquiry*%0A*Name:* ${n}%0A*Phone:* ${p}`;
+            const ad = document.getElementById('parAddr').value;
+            
+            if(!n || !p || !c) { alert("Kripya Naam, Class aur Number bharein!"); return; }
+            
+            const msg = `*NEW ADMISSION INQUIRY*%0A%0A` +
+                        `*Name:* ${n}%0A` +
+                        `*Age:* ${a}%0A` +
+                        `*Class:* ${c}%0A` +
+                        `*Phone:* ${p}%0A` +
+                        `*Address:* ${ad}`;
             window.open(`https://wa.me/919977851389?text=${msg}`, '_blank');
         }
 
-        // Har 30 second mein notice check karein (Live update)
         updateNotice();
-        setInterval(updateNotice, 30000);
+        setInterval(updateNotice, 30000); // 30 sec refresh
     </script>
 </body>
 </html>
